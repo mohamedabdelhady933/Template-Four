@@ -1,0 +1,326 @@
+/* landing page  */
+:root{
+    --main-color:#c7931c;
+    --second-color:#9d94ec;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    
+}
+ /* Component  */
+ .container{
+    width: 90%;
+    padding: 0 15px;
+    margin: auto;
+}
+ /* Component  */
+
+
+.landing{
+    min-height: 100vh;
+    background-image: url('../images/04.jpg');
+    background-size: cover;
+    position: relative;
+}
+.overlay{
+    background-color:rgba(0,0,0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.header{
+    position: relative;
+    z-index: 2;
+    color:white;
+    display: flex;
+}
+.header .logo{
+    width: 300px;
+    padding: 15px;
+    font-weight: bolder;
+    font-size: 24px;
+}
+.header ul{
+    list-style: none;
+    padding-right: 20px;
+    width: 100%;
+    text-align: right;
+    
+    
+
+}
+.header ul li{
+    display: inline-block;
+    padding: 20px;
+    margin-left: 10px ;
+
+}
+.text{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    
+}
+.text h1{
+    color:var(--main-color);
+    font-size: 40pxS;
+}
+
+.text p{
+    line-height: 1.6;
+    font-size: 20px ;
+    color: white;
+    font-weight: bolder;
+}
+.header ul li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.header ul li a:hover,.header ul li a.active{
+    color: var(--main-color);
+}
+
+/* --------------------------------------SettignBox--------------- */
+.setting-box{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    width: 200px;
+    transition: 0.3s;
+    min-height: 100vh;
+}
+.setting-box.open{
+    left: 0;
+}
+.setting-box .icon-container{
+    position: absolute;
+    right: -30px;
+    text-align: center;
+    top: 150px;
+    background-color: white;
+    
+    font-size: 20px;
+    cursor: pointer;
+}
+.setting-box .icon-container .fa-cog{
+    width: 30px;
+    padding: 8px 0;
+    
+}
+
+
+.setting-box .setting-container .option-box{
+    padding: 20px;
+    margin: 10px 10px;
+    background-color: #EEE;
+}
+.setting-box .setting-container .option-box h4{
+    margin: 0;
+    color: #666;    
+    font-size: 14px;
+}
+.setting-box .setting-container .option-box .colors-list{
+text-align: center;
+list-style: none;
+padding: 0;
+margin: 10px 0;
+}
+.setting-box .setting-container .option-box .colors-list li{
+width: 23px;
+height: 23px;
+border-radius: 50%;
+background-color: #333;
+border:3px solid #EEE;
+display: inline-block;
+cursor: pointer;
+}
+.setting-box .setting-container .option-box .colors-list li.active{
+    border-color: white;
+
+}
+
+
+.setting-box .setting-container .option-box .colors-list li:first-child{
+    background-color: #c7931c;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(2){
+    background-color: #9d94ec;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(3){
+    background-color: #fd3630;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(4){
+    background-color: #d4ca4f;
+}
+.setting-box .setting-container .option-box .colors-list li:last-child{
+    background-color: #dc4e89;
+}
+
+.setting-box .option-box .yes,
+.setting-box .option-box .no{
+    width: 50px;
+    background-color: #009688;
+    color: white;
+    opacity: 0.5;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.setting-box .random-background span.active{
+    opacity: 1;
+}
+/* --------------------------------------------About Us ------------------------------ */
+
+.about-us{
+    padding: 50px 0;
+    display: flex;
+}
+.about-us .info-box{
+    flex: 1;
+
+}
+.about-us .info-box h2{
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: bolder;
+}
+.about-us .info-box p{
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+.about-us .image-box{
+    flex: 1;
+    text-align: right;
+}
+.about-us .image-box img{
+    width:450px;
+}
+/* -------------------OurSkills-------------------------------- */
+.our-skills{
+    background-color: #EEE;
+    padding: 20px 0;
+}
+
+.our-skills .container h1 {
+    color: var(--main-color);
+    margin: 30px 0 50px;
+    text-align: center;
+    font-size: 30px;
+}
+.our-skills .container .skill{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px ;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.our-skills .container .skill p{
+    font-size: 20px;
+}
+.our-skills .container .skill .level-skill {
+    background-color: #f5f5f5;
+    width: 85%;
+    height: 60%;
+    position: relative;
+    border-radius: 15px;
+}
+
+.our-skills .container .skill .level-skill span{
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all 0.7s;
+}
+
+
+/* ----------------------------Our Gallery--------------------- */
+.gallery{
+    padding: 50px 0;
+}
+
+.gallery h2{
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
+}
+.gallery .container .images-box{
+    text-align: center;
+}
+
+.gallery .container .images-box img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #CCC;
+    padding: 3px;
+    background-color: #f6f6f6;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1000;
+}
+.popup-box{
+position: fixed;
+left: 50%;
+top: 50%;
+padding: 20px;
+transform: translate(-50% , -50%);
+background-color: #FFF;
+border: 2px solid #CCC;
+z-index: 1001;
+}
+.popup-box img {
+    max-width: 100%;
+}
+.close-button{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50%;
+}
